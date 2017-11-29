@@ -65,11 +65,23 @@
             android:layout_height="match_parent"
             android:visibility="invisible"
             android:contentDescription="@string/touch_to_close"/>
-    <TextView
-            android:text="This is a sample string. This is a sample string. This is a sample string. This is a sample string. This is a sample string. This is a sample string."
+    <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:id="@+id/textStartPopup"
-            android:background="@color/imageBackground"
-            android:gravity="center" android:textColor="?android:attr/colorBackground" android:textSize="30sp"
-            android:clickable="true" android:fitsSystemWindows="true"/>
+            android:layout_height="match_parent" android:fitsSystemWindows="true"
+            android:background="@color/imageBackground3" android:clickable="true" android:gravity="center"
+            android:id="@+id/tutorial">
+        <TextView
+                android:text="@string/popup_tutorial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textStartPopup"
+                android:gravity="center" android:textColor="?android:attr/colorBackground"
+                android:textSize="30sp"/>
+        <Button
+                android:text="@android:string/ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button"
+                style="@style/Widget.AppCompat.Button.Colored" android:textSize="18sp" android:elevation="5dp"
+                android:layout_margin="10dp"/>
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

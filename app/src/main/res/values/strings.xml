@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Endangered Species DEM</string>
     <string name="touch_to_close">Touch to close</string>
+    <string name="popup_tutorial">Welcome! \n Tap an image to expand it and view a larger version.</string>
 </resources>

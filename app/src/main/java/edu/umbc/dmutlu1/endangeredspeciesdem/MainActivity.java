@@ -4,10 +4,7 @@ import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.*;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -18,7 +15,8 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView textPopup = findViewById(R.id.textStartPopup);
+        LinearLayout linearLayout = findViewById(R.id.tutorial);
+        Button buttonPopup = findViewById(R.id.button);
 
         GridView gridview = findViewById(R.id.gridView);
         gridview.setAdapter(new ImageAdapter(this));
@@ -29,7 +27,7 @@ public class MainActivity extends AppCompatActivity
             makeToast(ImageAdapter.imageDescriptions[pos]);
         });
 
-        textPopup.setOnClickListener(view -> textPopup.setVisibility(View.GONE));
+        buttonPopup.setOnClickListener(view -> linearLayout.setVisibility(View.GONE));
     }
 
     private void zoomImageFromThumb(int imageResId)
