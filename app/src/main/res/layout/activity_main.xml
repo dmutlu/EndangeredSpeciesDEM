@@ -24,7 +24,8 @@
                 app:title="@string/app_name"
                 app:collapsedTitleGravity="top"
                 app:expandedTitleGravity="center_horizontal"
-                app:expandedTitleMargin="10sp"
+                app:expandedTitleMargin="10dp"
+                app:expandedTitleTextAppearance="@style/AppTheme.ActionBar"
                 app:contentScrim="@color/colorPrimary">
 
             <ImageView
@@ -33,6 +34,7 @@
                     android:layout_height="match_parent"
                     android:src="@drawable/rhino"
                     android:scaleType="centerCrop"
+                    android:tint="@color/imageBackground2"
                     android:contentDescription="@string/app_name"
             />
 
@@ -63,4 +65,11 @@
             android:layout_height="match_parent"
             android:visibility="invisible"
             android:contentDescription="@string/touch_to_close"/>
+    <TextView
+            android:text="This is a sample string. This is a sample string. This is a sample string. This is a sample string. This is a sample string. This is a sample string."
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/textStartPopup"
+            android:background="@color/imageBackground"
+            android:gravity="center" android:textColor="?android:attr/colorBackground" android:textSize="30sp"
+            android:clickable="true" android:fitsSystemWindows="true"/>
 </android.support.design.widget.CoordinatorLayout>
